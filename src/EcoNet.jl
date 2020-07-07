@@ -1,5 +1,16 @@
 module EcoNet
 
-# Write your package code here.
+# dependency
+using LinearAlgebra, Statistics, Distributions
 
-end
+export
+# foodwebs.jl
+FoodWeb, generateFoodWeb,
+
+# odeModel.jl
+webDynamic!
+
+include("foodwebs.jl")
+include("odeModel.jl")
+
+end # module
