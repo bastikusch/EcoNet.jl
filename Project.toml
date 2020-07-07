@@ -1,0 +1,13 @@
+name = "EcoNet"
+uuid = "c08a187d-2aba-45e1-9236-6bab64788dfb"
+authors = ["Basti Kusch <bastikusch@live.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
