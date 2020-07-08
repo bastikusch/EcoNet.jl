@@ -9,6 +9,10 @@ end
 
 ## functions
 
+function info()
+    @info "This is a nice package"
+end
+
 function generateFoodWeb(S::Int, C::Float64)
     @assert (C <= 0.5 && C >= 0.0)
     β = 1.0 / (2.0 * C) - 1.0
