@@ -6,14 +6,6 @@ function holling2(u,r,kappa,A,ind)
     return r[ind] .* u[ind] .* (A' * u)[ind] ./ (kappa[ind] .+ (A' * u)[ind])
 end
 
-# function dependentLoss(u,r,kappa,A,ind)
-#     L = zeros(size(ind,1))
-#     for i = ind
-#         L[i - ind[1] + 1] = sum((A[i,:] .* u[i] .* u) ./ (kappa .+ sum(A .* u, dims = 1)[:]))
-#     end
-#     return L
-# end
-
 function dependentLoss(u,r,kappa,A,ind)
     return u[ind] .* sum((A[ind,:]' .* u) ./ (kappa .+ sum(A .* u, dims = 1)[:]), dims = 1)[:]
 end
