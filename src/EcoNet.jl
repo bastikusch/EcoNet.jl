@@ -5,7 +5,7 @@ using LinearAlgebra, Statistics, Distributions
 
 export
 # foodwebs.jl
-FoodWeb, generateFoodWeb, info
+FoodWeb, generateFoodWeb, info,
 
 # odeModel.jl
 webDynamic!
